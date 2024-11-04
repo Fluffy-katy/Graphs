@@ -183,6 +183,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Dicstra.cpp" />
     <ClCompile Include="Graph.cpp" />
     <ClCompile Include="Graph_Main.cpp" />
   </ItemGroup>

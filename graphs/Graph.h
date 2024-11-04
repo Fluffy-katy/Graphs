@@ -32,7 +32,7 @@ public:
     Graph(const std::unordered_map<int, Edge>& edges, const std::set<int>& nodes);
     double lenghtShortestPath(std::vector<int>&);
 
-    
+    std::vector<int> metodDeikstra(int StartNode, int EndNode) const;
 
 private:
     int GetIndex(int node) const;
