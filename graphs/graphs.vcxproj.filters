@@ -21,7 +21,7 @@
     <ClCompile Include="Graph.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Dicstra.cpp">
+    <ClCompile Include="Dicstra_Gyrbu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
