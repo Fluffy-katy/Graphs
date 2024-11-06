@@ -35,7 +35,7 @@ int main() {
     Connections connections;
 
     ifstream fin;
-    fin.open("Graph/graph1.txt");
+    fin.open("Graph/graph2.txt");
     int count_connections;
     fin >> count_connections;
 
