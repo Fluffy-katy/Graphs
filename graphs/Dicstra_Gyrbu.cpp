@@ -3,8 +3,7 @@
 
 using namespace std;
 
-vector<int> Graph::metodDeikstra(int StartNode, int EndNode) const {
-
+vector<int> Graph::metodDeikstra(vector<vector<double>> adj_weight, int StartNode, int EndNode) {
 	vector<int> dist(SizeGraph, INT_MAX);
 	vector<int> prev(SizeGraph, -1);
 	vector<bool> visited(SizeGraph, false);
@@ -44,12 +43,10 @@ vector<int> Graph::metodDeikstra(int StartNode, int EndNode) const {
 			current_node = prev[current_node];
 		}
 		else {
-			cout << "No way" << endl;
 			return vector<int>();
 		}
 	}
 	path.push_back(nodes.at(StartNode));
 	reverse(path.begin(), path.end());
-
 	return path;
 }

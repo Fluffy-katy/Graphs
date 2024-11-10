@@ -56,6 +56,6 @@ double Graph::lenghtShortestPath(std::vector<int>& path)
 	return length;
 }
 
-//std::vector<std::vector<double>> Graph::get_adj_weight() {
-//	return adj_weight;
-//}
+std::vector<std::vector<double>> Graph::get_adj_weight() {
+	return adj_weight;
+}

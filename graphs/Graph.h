@@ -30,9 +30,10 @@ class Graph
 {
 public:
     Graph(const std::unordered_map<int, Edge>& edges, const std::set<int>& nodes);
+    std::vector<std::vector<double>> get_adj_weight();
     double lenghtShortestPath(std::vector<int>&);
 
-    std::vector<int> metodDeikstra(int StartNode, int EndNode) const;
+    std::vector<int> metodDeikstra(std::vector<std::vector<double>> adj_weight, int StartNode, int EndNode);
 
 private:
     int GetIndex(int node) const;
