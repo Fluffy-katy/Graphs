@@ -32,13 +32,6 @@ Graph::Graph(const unordered_map<int, Edge>& edges, const set<int>& nodes) : edg
 		auto j = GetIndex(edge.to);
 		adj_weight[i][j] = edge.weight;
 	}
-
-	for (int i = 0; i < SizeGraph; i++) {
-		for (int j = 0; j < SizeGraph; j++) {
-			cout << adj_weight[i][j] << " ";
-		}
-		cout << endl;
-	}
 }
 
 
@@ -63,5 +56,6 @@ double Graph::lenghtShortestPath(std::vector<int>& path)
 	return length;
 }
 
-
-
+//std::vector<std::vector<double>> Graph::get_adj_weight() {
+//	return adj_weight;
+//}
