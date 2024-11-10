@@ -14,7 +14,7 @@ bool Graph::DFS_Recursive(vector<vector<double>> adjMatrix, int start, int end, 
 
     // Проходим по всем соседям
     for (int i = 0; i < adjMatrix.size(); i++) {
-        if (adjMatrix[start][i] != 0 && !visited[i]) { 
+        if (adjMatrix[start][i] != 0 && !visited[i]) {
             if (DFS_Recursive(adjMatrix, i, end, visited, path)) {
                 return true;
             }
