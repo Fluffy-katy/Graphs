@@ -70,15 +70,17 @@ int main() {
 
     // Watch Example (how
     cout << "--------------method Deikstra--------------" << endl;
-    Graph graph = Graph(connections.edges, connections.nodes);
+    
+    //old method
+
+    /*Graph graph = Graph(connections.edges, connections.nodes);
     vector<int> result = graph.metodDeikstra(1, 6);
 
     for (auto node : result) {
         cout << node << " -> ";
     }
     cout << "end" << endl;
-    cout << "Len: " << graph.lenghtShortestPath(result) << endl;
-
+    cout << "Len: " << graph.lenghtShortestPath(result) << endl;*/
 
     
     /*Run("method Deikstra graph 1", &Graph::metodDeikstra, 1, 6, "Graph/graph1.txt");
