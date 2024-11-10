@@ -35,6 +35,8 @@ public:
 
     std::vector<int> metodDeikstra(std::vector<std::vector<double>> adj_weight, int StartNode, int EndNode);
 
+    std::vector<int> FloydWarshall(std::vector<std::vector<double>> adjMatrix, int start, int end);
+
 private:
     int GetIndex(int node) const;
     std::map<int, int> nodes;

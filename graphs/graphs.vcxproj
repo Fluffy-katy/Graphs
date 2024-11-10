@@ -185,6 +185,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Dicstra_Gyrbu.cpp" />
+    <ClCompile Include="FloydWarshall_Pavlichenko.cpp" />
     <ClCompile Include="Graph.cpp" />
     <ClCompile Include="Graph_Main.cpp" />
   </ItemGroup>
