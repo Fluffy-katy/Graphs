@@ -87,13 +87,13 @@ int main() {
     Run("method DFS graph 1", &Graph::DFS, 1, 6, "Graph/graph1.txt");
     Run("method DFS graph 3", &Graph::DFS, 1, 9, "Graph/graph3.txt");
     Run("method DFS graph 4", &Graph::DFS, 1, 7, "Graph/graph4.txt");
-    Run("method DFS graph 5", &Graph::DFS, 1, 4, "Graph/graph5.txt");
+    Run("method DFS graph 5", &Graph::DFS, 1, 4, "Graph/graph5.txt");*/
 
     cout << "--------------method FloydWarshall--------------" << endl;
     Run("method FloydWarshall graph 1", &Graph::FloydWarshall, 1, 6, "Graph/graph1.txt");
     Run("method FloydWarshall graph 3", &Graph::FloydWarshall, 1, 9, "Graph/graph3.txt");
     Run("method FloydWarshall graph 4", &Graph::FloydWarshall, 1, 7, "Graph/graph4.txt");
-    Run("method FloydWarshall graph 5", &Graph::FloydWarshall, 1, 4, "Graph/graph5.txt");*/
+    Run("method FloydWarshall graph 5", &Graph::FloydWarshall, 1, 4, "Graph/graph5.txt");
 
     return 0;
 
