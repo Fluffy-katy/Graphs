@@ -66,18 +66,14 @@ int main() {
     }
     fin.close();
 
-
-
-    // Watch Example (how
-    cout << "--------------method Deikstra--------------" << endl;
-
     
+    cout << "--------------method Deikstra--------------" << endl;
     Run("method Deikstra graph 1", &Graph::metodDeikstra, 1, 6, "Graph/graph1.txt");
     Run("method Deikstra graph 3", &Graph::metodDeikstra, 1, 9, "Graph/graph3.txt");
     Run("method Deikstra graph 4", &Graph::metodDeikstra, 1, 7, "Graph/graph4.txt");
     Run("method Deikstra graph 5", &Graph::metodDeikstra, 1, 4, "Graph/graph5.txt");
 
-    /*cout << endl << "--------------method BFS--------------" << endl;
+    cout << endl << "--------------method BFS--------------" << endl;
     Run("method BFS graph 1", &Graph::BFS, 1, 6, "Graph/graph1.txt");
     Run("method BFS graph 3", &Graph::BFS, 1, 9, "Graph/graph3.txt");
     Run("method BFS graph 4", &Graph::BFS, 1, 7, "Graph/graph4.txt");
@@ -87,7 +83,7 @@ int main() {
     Run("method DFS graph 1", &Graph::DFS, 1, 6, "Graph/graph1.txt");
     Run("method DFS graph 3", &Graph::DFS, 1, 9, "Graph/graph3.txt");
     Run("method DFS graph 4", &Graph::DFS, 1, 7, "Graph/graph4.txt");
-    Run("method DFS graph 5", &Graph::DFS, 1, 4, "Graph/graph5.txt");*/
+    Run("method DFS graph 5", &Graph::DFS, 1, 4, "Graph/graph5.txt");
 
     cout << "--------------method FloydWarshall--------------" << endl;
     Run("method FloydWarshall graph 1", &Graph::FloydWarshall, 1, 6, "Graph/graph1.txt");
