@@ -43,17 +43,36 @@ int Graph::GetIndex(int vertice) const
 	return INT16_MAX;
 }
 
+int Graph::GetNode(int i) const
+{
+	for (auto& [index, node] : nodes) {
+		if (index == i) { return node; }
+	}
+	return INT16_MAX;
+}
+
+
 double Graph::lenghtShortestPath(std::vector<int>& path)
 {
+	vector<int> nodepath = createNodePath(path);
 	double length = 0.0;
-	if (path.size() < 2) { return length; }
+	if (nodepath.size() < 2) { return length; }
 
-	for (size_t i = 0; i < path.size() - 1; ++i) {
-		int start = GetIndex(path[i]);
-		int end = GetIndex(path[i + 1]);
+	for (size_t i = 0; i < nodepath.size() - 1; ++i) {
+		int start = GetIndex(nodepath[i]);
+		int end = GetIndex(nodepath[i + 1]);
 		length += adj_weight[start][end];
 	}
 	return length;
+}
+
+
+vector<int> Graph::createNodePath(vector<int>& path) {
+	vector<int> newpath;
+	for (size_t i = 0; i < path.size(); ++i) {
+		newpath.push_back(GetNode(path[i]));
+	}
+	return newpath;
 }
 
 std::vector<std::vector<double>> Graph::get_adj_weight() {
