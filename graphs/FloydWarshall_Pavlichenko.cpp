@@ -5,13 +5,10 @@ using namespace std;
 
 const int INF = numeric_limits<int>::max();  
 
-vector<int> Graph::FloydWarshall(vector<vector<double>> adjMatrix, int start, int end) 
+vector<int> FloydWarshall(vector<vector<double>> adjMatrix, int start, int end) 
 {
     double n = adjMatrix.size();
     vector<vector<double>> next(n, vector<double>(n, -1)); 
-
-    start = GetIndex(start);
-    end = GetIndex(end);
 
 
     for (int i = 0; i < n; i++) 
@@ -65,9 +62,9 @@ vector<int> Graph::FloydWarshall(vector<vector<double>> adjMatrix, int start, in
         if (at == -1) {
             return {};  
         }
-        path.push_back(nodes.at(at));
+        path.push_back(at);
     }
-    path.push_back(nodes.at(end));  
+    path.push_back(end);  
 
     return path;
 }
