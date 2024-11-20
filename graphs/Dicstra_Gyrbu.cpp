@@ -3,13 +3,13 @@
 
 using namespace std;
 
-vector<int> Graph::metodDeikstra(vector<vector<double>> adj_weight, int StartNode, int EndNode) {
-	vector<int> dist(SizeGraph, INT_MAX);
-	vector<int> prev(SizeGraph, -1);
-	vector<bool> visited(SizeGraph, false);
+vector<int> metodDeikstra(vector<vector<double>> adj_weight, int StartNode, int EndNode) {
+	vector<int> dist(adj_weight.size(), INT_MAX);
+	vector<int> prev(adj_weight.size(), -1);
+	vector<bool> visited(adj_weight.size(), false);
 
-	StartNode = GetIndex(StartNode);
-	EndNode = GetIndex(EndNode);
+	//StartNode = GetIndex(StartNode);
+	//EndNode = GetIndex(EndNode);
 
 	dist[StartNode] = 0;
 
@@ -24,7 +24,7 @@ vector<int> Graph::metodDeikstra(vector<vector<double>> adj_weight, int StartNod
 
 		visited[u] = true;
 
-		for (int v = 0; v < SizeGraph; ++v) {
+		for (int v = 0; v < adj_weight.size(); ++v) {
 			if (!visited[v] && adj_weight[u][v] && dist[u] != INT_MAX &&
 				dist[u] + adj_weight[u][v] < dist[v])
 			{
@@ -38,7 +38,8 @@ vector<int> Graph::metodDeikstra(vector<vector<double>> adj_weight, int StartNod
 	vector<int> path;
 	int current_node = EndNode;
 	while (current_node != StartNode) {
-		path.push_back(nodes.at(current_node));
+		/*path.push_back(nodes.at(current_node));*/
+		path.push_back(current_node);
 		if (prev[current_node] != -1) {
 			current_node = prev[current_node];
 		}
@@ -46,7 +47,8 @@ vector<int> Graph::metodDeikstra(vector<vector<double>> adj_weight, int StartNod
 			return vector<int>();
 		}
 	}
-	path.push_back(nodes.at(StartNode));
+	//path.push_back(nodes.at(StartNode));
+	path.push_back(StartNode);
 	reverse(path.begin(), path.end());
 	return path;
 }
