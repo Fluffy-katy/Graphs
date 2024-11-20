@@ -61,32 +61,32 @@ int main() {
     int b2 = 6;
     
     cout << "--------------method Deikstra--------------" << endl;
-   /* Run("method Deikstra graph 1", metodDeikstra, a2, b2, "Graph/graph1.txt");
-    Run("method Deikstra graph 2", metodDeikstra, a1, b1, "Graph/graphNeg.txt");
+    Run("method Deikstra graph 1", metodDeikstra, a2, b2, "Graph/graph1.txt");
+    Run("method Deikstra graph 2", metodDeikstra, a1, b1, "Graph/graph8.txt");
     Run("method Deikstra graph 3", metodDeikstra, a1, b1, "Graph/graphCC.txt");
     Run("method Deikstra graph 4", metodDeikstra, a1, b1, "Graph/graphIC.txt");
-    Run("method Deikstra graph 5", metodDeikstra, a1, b1, "Graph/graphC2.txt");*/
+    Run("method Deikstra graph 5", metodDeikstra, a1, b1, "Graph/graphC2.txt");
 
-    /*cout << endl << "--------------method BFS--------------" << endl;
+    cout << endl << "--------------method BFS--------------" << endl;
     Run("method BFS graph 1", BFS, a2, b2, "Graph/graph1.txt");
-    Run("method BFS graph 2", BFS, a1, b1, "Graph/graphNeg.txt");
+    Run("method BFS graph 2", BFS, a1, b1, "Graph/graph8.txt");
     Run("method BFS graph 3", BFS, a1, b1, "Graph/graphCC.txt");
     Run("method BFS graph 4", BFS, a1, b1, "Graph/graphIC.txt");
     Run("method BFS graph 5", BFS, a1, b1, "Graph/graphC2.txt");
 
     cout << endl << "--------------method DFS--------------" << endl;
     Run("method DFS graph 1", DFS, a2, b2, "Graph/graph1.txt");
-    Run("method DFS graph 2", DFS, a1, b1, "Graph/graphNeg.txt");
+    Run("method DFS graph 2", DFS, a1, b1, "Graph/graph8.txt");
     Run("method DFS graph 3", DFS, a1, b1, "Graph/graphCC.txt");
     Run("method DFS graph 4", DFS, a1, b1, "Graph/graphIC.txt");
     Run("method DFS graph 5", DFS, a1, b1, "Graph/graphC2.txt");
 
     cout << "--------------method FloydWarshall--------------" << endl;
     Run("method FloydWarshall graph 1", FloydWarshall, a2, b2, "Graph/graph1.txt");
-    Run("method FloydWarshall graph 2", FloydWarshall, a1, b1, "Graph/graphNeg.txt");
+    Run("method FloydWarshall graph 2", FloydWarshall, a1, b1, "Graph/graph8.txt");
     Run("method FloydWarshall graph 3", FloydWarshall, a1, b1, "Graph/graphCC.txt");
     Run("method FloydWarshall graph 4", FloydWarshall, a1, b1, "Graph/graphIC.txt");
-    Run("method FloydWarshall graph 5", FloydWarshall, a1, b1, "Graph/graphC2.txt");*/
+    Run("method FloydWarshall graph 5", FloydWarshall, a1, b1, "Graph/graphC2.txt");
 
 
     return 0;
