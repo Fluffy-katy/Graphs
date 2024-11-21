@@ -1,41 +1,36 @@
 #include "Graph.h"
-#include <queue>
+#include <stack>
+#include <vector>
 
 using namespace std;
 
-// Функция DFS для поиска пути в графе
-bool DFS_Recursive(vector<vector<double>> adjMatrix, int start, int end, vector<bool>& visited, vector<int>& path) {
+// Основная функция для вызова DFS 
+vector<int> DFS(vector<vector<double>> adjMatrix, int start, int end) {
+    //создаем вектор, его размер - кол-во вершин в графе (для посещ. вершин)
+    vector<bool> visited(adjMatrix.size(), false);
+    vector<int> path; //вектор для вершин, которые будут входить в наш путь
+    stack<int> s; // вершины, которые мы хотим посетить
+
+    s.push(start);
     visited[start] = true;
-    /*path.push_back(nodes.at(start));*/
-    path.push_back(start);
 
-    if (start == end) {
-        return true;
-    }
+    while (!s.empty()) {
+        int u = s.top();
+        s.pop();
+        path.push_back(u);
 
-    // Проходим по всем соседям
-    for (int i = 0; i < adjMatrix.size(); i++) {
-        if (adjMatrix[start][i] > 0 && !visited[i]) {
-            if (DFS_Recursive(adjMatrix, i, end, visited, path)) {
-                return true;
+        if (u == end) {
+            return path;
+        }
+
+        for (int v = 0; v < adjMatrix.size(); ++v) {
+            if (adjMatrix[u][v] > 0 && !visited[v]) {
+                s.push(v);
+                visited[v] = true;
             }
         }
     }
-    path.pop_back();
-    return false;
+
+    return {}; 
 }
 
-// Основная функция для вызова DFS
-vector<int> DFS(vector<vector<double>> adjMatrix, int start, int end) {
-    vector<bool> visited(adjMatrix.size(), false);
-    vector<int> path;
-    //start = GetIndex(start);
-    //end = GetIndex(end);
-
-    if (DFS_Recursive(adjMatrix, start, end, visited, path)) {
-        return path;
-    }
-    else {
-        return {};
-    }
-}

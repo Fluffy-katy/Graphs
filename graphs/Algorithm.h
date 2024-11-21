@@ -10,5 +10,4 @@ std::vector<int> BFS(std::vector<std::vector<double>> adj_matrix, int sourse, in
 
 std::vector<int> DFS(std::vector<std::vector<double>> adjMatrix, int start, int end);
 
-bool DFS_Recursive(std::vector<std::vector<double>> adjMatrix,
-    int start, int end, std::vector<bool>& visited, std::vector<int>& path);
+
